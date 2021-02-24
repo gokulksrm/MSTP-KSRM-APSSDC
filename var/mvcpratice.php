@@ -1,0 +1,44 @@
+<?php
+
+
+class Book {
+public $title;
+public $author;
+public $description;
+
+public function __construct($title, $author, $description)
+{
+$this->title = $title;
+$this->author = $author;
+$this->description = $description;
+}
+}
+
+
+class Model {
+public function getBookList()
+{
+// here goes some hardcoded values to simulate the database
+return array(
+"Jungle Book" => new Book("Jungle Book", "R. Kipling", "A classic book."),
+"Moonwalker" => new Book("Moonwalker", "J. Walker", ""),
+"PHP for Dummies" => new Book("PHP for Dummies", "Some Smart Guy", "")
+);
+}
+
+public function getBook($title)
+{
+// we use the previous function to get all the books and then we return the requested one.
+// in a real life scenario this will be done through a db select command
+$allBooks = $this->getBookList();
+return $allBooks[$title];
+}
+
+}
+
+
+$model=new Model();
+$result=$model->getBookList();
+var_dump($result);
+
+?>
