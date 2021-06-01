@@ -1,0 +1,4 @@
+name: Simple custom form
+description: This is our first custom form
+type: module
+core: 8.x

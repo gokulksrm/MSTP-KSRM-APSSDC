@@ -1,0 +1,7 @@
+custom_simple_form.simple_form_ajax:
+  path: '/custom-simple-form'
+  defaults:
+    _form: 'Drupal\custom_simple_form\Form\SimpleForm'
+    _title: 'Our cooling form'
+  requirements:
+    _permission: 'access content'

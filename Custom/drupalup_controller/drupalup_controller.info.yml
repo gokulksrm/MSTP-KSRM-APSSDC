@@ -1,0 +1,5 @@
+name: my first module
+description: custom module with template
+type: module
+core: 8.x
+
